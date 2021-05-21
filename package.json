@@ -1,0 +1,23 @@
+{
+  "name": "@power-industries/assertjs",
+  "version": "1.0.0",
+  "description": "Type Assertion Library for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/power-industries/AssertJS.git"
+  },
+  "author": "Philipp Steckenbauer <philipp@steckenbauer.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/power-industries/AssertJS/issues"
+  },
+  "homepage": "https://github.com/power-industries/AssertJS#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^26.6.3"
+  }
+}
