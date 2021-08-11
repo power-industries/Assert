@@ -1,4 +1,4 @@
-const Assert = require('./index');
+import Assert from "./index";
 
 describe('Testing AssertJS', () => {
 	test('Testing Undefined', () => {
@@ -13,11 +13,11 @@ describe('Testing AssertJS', () => {
 	test('Testing Number', () => {
 		expect(Assert.isNumber(123)).toBeTruthy();
 	});
+	test('Testing Numerical', () => {
+		expect(Assert.isNumerical(123.123)).toBeTruthy();
+	});
 	test('Testing Integer', () => {
 		expect(Assert.isInteger(123)).toBeTruthy();
-	});
-	test('Testing Float', () => {
-		expect(Assert.isFloat(123.45)).toBeTruthy();
 	});
 	test('Testing BigInt', () => {
 		expect(Assert.isBigInt(123n)).toBeTruthy();
@@ -34,8 +34,14 @@ describe('Testing AssertJS', () => {
 	test('Testing Array', () => {
 		expect(Assert.isArray([1, 2, 3])).toBeTruthy();
 	});
+	test('Testing Set', () => {
+		expect(Assert.isSet([1, 2, 3])).toBeTruthy();
+	});
 	test('Testing Object', () => {
 		expect(Assert.isObject({a: 1, b: 2})).toBeTruthy();
+	});
+	test('Testing Map', () => {
+		expect(Assert.isMap([[1, 2], [2, 3]])).toBeTruthy();
 	});
 	test('Testing Symbol', () => {
 		expect(Assert.isSymbol(Symbol())).toBeTruthy();

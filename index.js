@@ -1,44 +1,65 @@
-module.exports = {
-	isUndefined: (value) => {
-		return value === undefined; 
-	},
-	isNull: (value) => {
+export default class Assert {
+	static isUndefined(value) {
+		return value === undefined;
+	}
+
+	static isNull(value) {
 		return value === null;
-	},
-	isBoolean: (value) => {
+	}
+
+	static isBoolean(value) {
 		return typeof value === 'boolean';
-	},
-	isNumber: (value) => {
+	}
+
+	static isNumber(value) {
+		return typeof value === 'number';
+	}
+
+	static isNumerical(value) {
 		return Number.isFinite(value);
-	},
-	isInteger: (value) => {
+	}
+
+	static isInteger(value) {
 		return Number.isSafeInteger(value);
-	},
-	isFloat: (value) => {
-		return Number.isFinite(value) && !Number.isSafeInteger(value);
-	},
-	isBigInt: (value) => {
+	}
+
+	static isBigInt(value) {
 		return typeof value === 'bigint';
-	},
-	isNaN: (value) => {
+	}
+
+	static isNaN(value) {
 		return Number.isNaN(value);
-	},
-	isInfinite: (value) => {
+	}
+
+	static isInfinite(value) {
 		return value === Infinity || value === -Infinity;
-	},
-	isString: (value) => {
+	}
+
+	static isString(value) {
 		return typeof value === 'string';
-	},
-	isArray: (value) => {
+	}
+
+	static isArray(value) {
 		return Array.isArray(value);
-	},
-	isObject: (value) => {
+	}
+
+	static isSet(value) {
+		return value instanceof Set;
+	}
+
+	static isObject(value) {
 		return Object.prototype.toString.call(value) === '[object Object]';
-	},
-	isSymbol: (value) => {
+	}
+
+	static isMap(value) {
+		return value instanceof Map;
+	}
+
+	static isSymbol(value) {
 		return typeof value === 'symbol';
-	},
-	isFunction: (value) => {
+	}
+
+	static isFunction(value) {
 		return typeof value === 'function';
 	}
 }
